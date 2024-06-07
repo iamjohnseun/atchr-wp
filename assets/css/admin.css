@@ -1,0 +1,29 @@
+.wrap {
+  padding: 20px;
+}
+
+.wrap h1 {
+
+}
+
+.wrap img {
+    display: block;
+    width: 75px;
+}
+
+.wrap p {
+    font-size: 1.1em;
+}
+
+.wrap div {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+
+#adminmenu .toplevel_page_atchr-messaging .wp-menu-image img {
+    margin-top: -15px;
+    transform: scale(2);
+}
