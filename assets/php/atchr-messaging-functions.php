@@ -88,9 +88,9 @@ function atchr_messaging_settings_init()
 {
   register_setting(
     'atchr_messaging_settings',
-    'atchr_embed_code',
+    'atchr_entity_id',
     array(
-      'sanitize_callback' => 'atchr_sanitize_embed_code',
+      'sanitize_callback' => 'atchr_sanitize_entity_id',
       'default' => ''
     )
   );
@@ -103,15 +103,15 @@ function atchr_messaging_settings_init()
   );
 
   add_settings_field(
-    'atchr_embed_code',
-    'Atchr Embed Code',
-    'atchr_embed_code_render',
+    'atchr_entity_id',
+    'Atchr Entity ID',
+    'atchr_entity_id_render',
     'atchr-messaging',
     'atchr_messaging_section'
   );
 }
 
-function atchr_sanitize_embed_code($input)
+function atchr_sanitize_entity_id($input)
 {
   return wp_kses($input, array(
     'script' => array(
@@ -130,21 +130,21 @@ function atchr_messaging_section_callback()
   echo '';
 }
 
-function atchr_embed_code_render()
+function atchr_entity_id_render()
 {
-  $embed_code = get_option('atchr_embed_code');
+  $entity_id = get_option('atchr_entity_id');
   ?>
-  <input type="text" name="atchr_embed_code" value="<?php echo isset($embed_code) ? esc_attr($embed_code) : ''; ?>"
+  <input type="text" name="atchr_entity_id" value="<?php echo isset($entity_id) ? esc_attr($entity_id) : ''; ?>"
     size="50" placeholder="Enter Embed Code">
   <?php
 }
 
 function atchr_messaging_embed_script()
 {
-  $embed_code = get_option('atchr_embed_code');
-  if ($embed_code) {
+  $entity_id = get_option('atchr_entity_id');
+  if ($entity_id) {
     wp_enqueue_script('atchr-messaging', ATCHR_MESSAGING_PLUGIN_URL . 'assets/js/atchr-messaging.js', [], ATCHR_MESSAGING_VERSION, true);
-    wp_localize_script('atchr-messaging', 'atchrMessaging', ['embedCode' => esc_js($embed_code)]);
+    wp_localize_script('atchr-messaging', 'atchrMessaging', ['entityID' => esc_js($entity_id)]);
   }
 }
 
