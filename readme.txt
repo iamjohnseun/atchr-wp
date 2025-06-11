@@ -1,5 +1,5 @@
 === Atchr Messaging ===
-Contributors: Chromesque, LLC
+Contributors: Chromesque LLC
 Tags: atchr, webchat, chat, widget, bubble
 Requires at least: 5.0
 Tested up to: 6.8
