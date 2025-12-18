@@ -3,7 +3,7 @@
  * Plugin Name: Atchr Messaging
  * Plugin URI: https://atchr.com
  * Description: Atchr by Chromesque is a secure AI Chatbot, Instant messaging & Analytics platform for organizations, businesses, teams and individuals. Atchr provides a secure communications platform that bridges the divide between you, your customers and your team.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Chromesque, LLC
  * Author URI: https://chromesque.com
  * Text Domain: atchr-messaging
@@ -31,7 +31,7 @@ if (!defined('ABSPATH')) {
   exit;
 }
 
-define('ATCHR_MESSAGING_VERSION', '1.0.0');
+define('ATCHR_MESSAGING_VERSION', '1.0.1');
 define('ATCHR_MESSAGING_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('ATCHR_MESSAGING_PLUGIN_URL', plugin_dir_url(__FILE__));
 
