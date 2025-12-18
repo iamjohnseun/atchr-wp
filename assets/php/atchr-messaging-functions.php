@@ -5,13 +5,16 @@ if (!defined('ABSPATH')) {
 
 function atchr_messaging_menu()
 {
+  $icon_svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95"><path d="M48.4 84.8c0 1.8 1.8 1.8 3.7 1.8 5.5-1.8 11.1-11.1 14.7-14.7 1.8-1.8 9.2-11.1 9.2-11.1.5-.8.9-1.5 1.2-2 1.5-3-1.5-1.7-3-1.7L48.4 71.9v12.9z" fill="#a7aaad"/><circle cx="46.6" cy="43.2" r="1.8" fill="#a7aaad" stroke="#a7aaad" stroke-width="8" stroke-miterlimit="10"/><circle cx="46.6" cy="43.2" r="28.4" fill="none" stroke="#a7aaad" stroke-width="12" stroke-miterlimit="10"/></svg>';
+  $icon_base64 = 'data:image/svg+xml;base64,' . base64_encode($icon_svg);
+
   add_menu_page(
     'Atchr Messaging Settings',
     'Atchr Messaging',
     'manage_options',
     'atchr-messaging',
     'atchr_messaging_settings_page',
-    esc_url(ATCHR_MESSAGING_PLUGIN_URL . 'assets/images/menu-icon.svg'),
+    $icon_base64,
     100
   );
 }
@@ -58,13 +61,6 @@ function atchr_messaging_settings_page()
   <div class="wrap postbox">
     <table>
       <tr>
-        <td style="width: 90px">
-  <?php echo wp_kses_post(atchr_get_plugin_image('logo-dark.png', 'Atchr Logo', [
-            'width' => '90',
-            'height' => '60',
-            'class' => 'atchr-logo'
-          ])); ?>
-        </td>
         <td><h1 class="title">Widget Settings</h1></td>
       </tr>
     </table>
