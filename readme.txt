@@ -3,7 +3,7 @@ Contributors: Chromesque LLC
 Tags: atchr, webchat, chat, widget, bubble
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -62,3 +62,6 @@ Yes, Atchr is designed with privacy in mind. For more details, please review our
 
 = 1.0.0 =
 Initial release of Atchr Messaging plugin.
+
+= 1.0.1 =
+Update to the menu image and dashboard UI.
