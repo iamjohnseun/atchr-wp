@@ -55,6 +55,11 @@ Yes, Atchr is designed with privacy in mind. For more details, please review our
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed menu icon display issues across all admin pages
+* Resolved PHP constant redefinition warnings
+* Improved SVG icon rendering with base64 encoding
+
 = 1.0.0 =
 * Initial release
 
@@ -62,6 +67,3 @@ Yes, Atchr is designed with privacy in mind. For more details, please review our
 
 = 1.0.0 =
 Initial release of Atchr Messaging plugin.
-
-= 1.0.1 =
-Update to the menu image and dashboard UI.
